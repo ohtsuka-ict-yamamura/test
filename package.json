@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "dev": "next dev",
     "start": "next start",
+    "test": "jest --watch --verbose",
+    "test:ci": "jest --ci --silent",
     "lint": "next lint"
   },
   "dependencies": {
