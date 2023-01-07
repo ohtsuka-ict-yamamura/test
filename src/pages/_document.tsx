@@ -1,3 +1,3 @@
-export default function Document() {
-  return <></>;
-}
+const Document = () => <></>;
+
+export default Document;
