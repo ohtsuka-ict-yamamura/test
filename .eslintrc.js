@@ -5,7 +5,13 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ["./tsconfig.json"],
   },
-  plugins: ["@typescript-eslint", "import", "unused-imports"],
+  plugins: [
+    "@typescript-eslint",
+    "import",
+    "unused-imports",
+    "jest",
+    "testing-library",
+  ],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -14,6 +20,9 @@ module.exports = {
     "plugin:import/typescript",
     "next/core-web-vitals",
     "prettier",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "plugin:testing-library/react",
   ],
   rules: {
     "@typescript-eslint/no-unused-vars": [
