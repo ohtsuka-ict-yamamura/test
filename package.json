@@ -5,10 +5,13 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
+    "format": "prettier --write --loglevel=warn 'src/**/*.{js,jsx,ts,tsx,json,html,css,md}'",
+    "lint": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "start": "next start",
     "test": "jest --watch --verbose",
     "test:ci": "jest --ci --silent",
-    "lint": "next lint"
+    "test:staged": "jest --bail --findRelatedTests --passWithNoTests",
+    "type": "bash -c tsc --noEmit"
   },
   "dependencies": {
     "@next/font": "13.1.1",
@@ -37,6 +40,7 @@
     "husky": "^8.0.3",
     "jest": "^29.3.1",
     "jest-environment-jsdom": "^29.3.1",
+    "lint-staged": "^13.1.0",
     "prettier": "^2.8.1"
   }
 }
