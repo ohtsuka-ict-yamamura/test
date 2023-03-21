@@ -1,0 +1,3 @@
+export const siteConfig = {
+  MAX_POSTS_COUNT_PER_PAGE: 10,
+};

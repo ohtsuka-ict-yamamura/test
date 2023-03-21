@@ -5,6 +5,12 @@ module.exports = {
     './src/pages/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
     extend: {
       colors: {
         nord: {
@@ -26,7 +32,76 @@ module.exports = {
           15: '#B48EAD',
         },
       },
+      fontFamily: {
+        dotGothic: ['DotGothic16', 'sans-serif'],
+        notSansJp: ['Not Sans JP', 'sans-serif'],
+        kokoro: ['Kokoro'],
+        vt323: ['VT323'],
+      },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: '#4C566A !important',
+            'max-width': 'none',
+            a: {
+              color: '#81A1C1',
+              'text-decoration': 'none',
+              '&:hover': {
+                'text-decoration': 'underline',
+              },
+              '&:focus': {
+                'text-decoration': 'underline',
+              },
+            },
+            'h1,h2,h3,h4,h5,h6,code,th,strong,blockquote': {
+              color: '#4C566A',
+            },
+            'h1,h2': {
+              'padding-bottom': '2px',
+              'border-color': theme('colors.gray.300'),
+              'border-bottom-width': '1px',
+            },
+            '.task-list-item': {
+              listStyleType: 'none',
+            },
+            p: {
+              'white-space': 'pre-wrap',
+            },
+            'ol li::marker': {
+              color: '#4C566A',
+            },
+            'ul li::marker': {
+              color: '#4C566A',
+            },
+            'li > p': {
+              'margin-top': 0,
+              'margin-bottom': 0,
+            },
+            li: {
+              'margin-top': 0,
+              'margin-bottom': 0,
+            },
+            'li > ul': {
+              'margin-top': 0,
+              'margin-bottom': 0,
+            },
+            'li > ol': {
+              'margin-top': 0,
+              'margin-bottom': 0,
+            },
+            'tbody > tr': {
+              'border-bottom-color': theme('colors.gray.300'),
+            },
+            thead: {
+              'border-bottom-color': theme('colors.gray.300'),
+            },
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/typography'),
+  ],
 };

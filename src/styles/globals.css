@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply bg-nord-6 font-notSansJp text-sm text-nord-3 sm:text-base;
+  }
+
+  #__next {
+    @apply h-screen;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -16,4 +26,14 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  outline: none;
+}
+
+button {
+  outline: none;
+}
+
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
